@@ -37,11 +37,15 @@ typedef struct Queue {
 } Queue;
 
 Queue* initQueue(int n) {
-    Queue* v = (Queue*)malloc()
+    Queue* v = (Queue*)malloc(sizeof(v));
+    v->data = insertvector(n);
+    v->size = n;
+    v->head = v->tail = v->count = 0;
+    return v;
 }
 
 int empty(Queue* q) {
-
+    return q->count == 0;
 }
 
 int push(Queue* q, int val) {
