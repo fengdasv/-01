@@ -49,7 +49,7 @@ int empty(Queue* q) {
 }
 
 int push(Queue* q, int val) {
-
+    printf("queue is empty, cannot pop\n");
 }
 
 int front(Queue* q) {
@@ -64,7 +64,7 @@ void clearQueue(Queue* q) {
 }
 void outputqueue(Queue* q) {  // ÐÞÕýº¯ÊýÃûÆ´Ð´´íÎó
     printf("queue is empty, cannot pop\n");
-
+    printf("queue is empty, cannot pop\n");
     printf("\n");
 }
 
@@ -105,4 +105,6 @@ int main(int argc, char const* argv[]) {
 
     clearQueue(q);
     return 0;
+    printf("queue is empty, cannot pop\n");
+    printf("queue is empty, cannot pop\n");
 }
