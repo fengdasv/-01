@@ -37,11 +37,11 @@ typedef struct Queue {
 } Queue;
 
 Queue* initQueue(int n) {
-    Queue* v = (Queue*)malloc(sizeof(v));
-    v->data = insertvector(n);
-    v->size = n;
-    v->head = v->tail = v->count = 0;
-    return v;
+    Queue* q = (Queue*)malloc(sizeof(Queue));
+    q->data = initvector(n);
+    q->size = n;
+    q->head = q->tail = q->count = 0;
+    return q;
 }
 
 int empty(Queue* q) {
@@ -49,7 +49,12 @@ int empty(Queue* q) {
 }
 
 int push(Queue* q, int val) {
+    if (q->count == q->size) return 0;
 
+    insertvector(q->data, q->tail, val);
+    q->tail = (q->tail + 1) % q->size;  // 修正：循环更新tail
+    q->count += 1;  // 修正：只增加一次count
+    return 1;
 }
 
 int front(Queue* q) {
