@@ -58,11 +58,15 @@ int push(Queue* q, int val) {
 }
 
 int front(Queue* q) {
-
+    if (empty(q)) return -1;  // 添加空队列检查
+    return vectorseek(q->data, q->head);
 }
 
 int pop(Queue* q) {
-
+    if (empty(q)) return 0;
+    q->head = (q->head + 1) % q->size;  // 修正：循环更新head
+    q->count -= 1;
+    return 1;
 }
 void clearQueue(Queue* q) {
 
