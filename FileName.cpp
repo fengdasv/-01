@@ -56,7 +56,7 @@ int push(Queue* q, int val) {
     q->count += 1;  // 修正：只增加一次count
     return 1;
 }
-
+void count (ssh)
 int front(Queue* q) {
     if (empty(q)) return -1;  // 添加空队列检查
     return vectorseek(q->data, q->head);
