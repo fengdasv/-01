@@ -107,4 +107,8 @@ int main(int argc, char const* argv[]) {
     return 0;
     printf("queue is empty, cannot pop\n");
     printf("queue is empty, cannot pop\n");
+    printf("queue is empty, cannot pop\n");
+    printf("queue is empty, cannot pop\n");
+    printf("queue is empty, cannot pop\n");
+    printf("queue is empty, cannot pop\n");
 }
